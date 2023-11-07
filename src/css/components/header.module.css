@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    padding: 23px 80px;
+    font-size: 16px;
+    background-color: var(--elements);
+    box-shadow: 0px 2px 5px -2px hsl(0, 0%, 52%);
+    -webkit-box-shadow: 0px 2px 5px -2px hsl(0, 0%, 52%);
+    -moz-box-shadow: 0px 2px 5px -2px hsl(0, 0%, 52%);
+}
+
+.header h1{
+    font-weight: 800;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 15px;
+}
+
+.mode:hover {
+    cursor: pointer;
+}
+
+.mode img{
+    width: 20px;
+    filter: var(--change-item);
+}
+
+.mode p {
+    font-weight: 800;
+}
