@@ -3,6 +3,21 @@ import style from '../css/components/header.module.css'
 
 export const Header = () => {
 
+    const [theme, setTheme] = useState(localStorage.getItem("Theme"))
+    
+    const onHandle = () => {
+        theme == 'ligth' ? localStorage.setItem("Theme", "dark") : localStorage.setItem("Theme", "ligth")
+        theme == 'dark' ? setTheme('ligth') : setTheme('dark') 
+    }
+
+    useEffect(() => {
+        document.body.setAttribute('data-theme', theme);
+    }, [theme]);
+
+    /* 
+
+    sin local storage
+    
     const [theme, setTheme] = useState('light')
 
     const onHandle = () => {
@@ -12,6 +27,8 @@ export const Header = () => {
     useEffect(() => {
         document.body.setAttribute('data-theme', theme);
     }, [theme]);
+
+    */
 
     return (
         <>

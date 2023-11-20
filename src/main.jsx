@@ -5,6 +5,8 @@ import { Country } from './components/Country.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+localStorage.setItem("Theme", "ligth")
+
 const router = createBrowserRouter([
   {
     path: '/',
